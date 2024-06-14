@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import ClassComponent from './ClassComponent';
 import FunctionComponent from './FunctionComponent';
+import JSXNestedChildren from './JSXNestedChildren';
 import './App.css';
 
 class Greeting extends Component {
@@ -30,6 +31,8 @@ function App() {
             <ClassComponent />
             <h3>Function Component</h3>
             <FunctionComponent />
+            <h3>JSX Nested Children</h3>
+            <JSXNestedChildren />
         </div>
     );
 }
