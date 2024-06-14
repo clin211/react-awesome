@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import ClassComponent from './ClassComponent';
+import FunctionComponent from './FunctionComponent';
 import './App.css';
 
 class Greeting extends Component {
@@ -24,6 +26,10 @@ function App() {
             </header>
             <Greeting name="Newton" />
             <Profile />
+            <h3>Class Component</h3>
+            <ClassComponent />
+            <h3>Function Component</h3>
+            <FunctionComponent />
         </div>
     );
 }
