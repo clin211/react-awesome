@@ -7,6 +7,15 @@ class Greeting extends Component {
     }
 }
 
+function Profile() {
+    return (
+        <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/GodfreyKneller-IsaacNewton-1689.jpg/250px-GodfreyKneller-IsaacNewton-1689.jpg"
+            alt="Katherine Johnson"
+        />
+    );
+}
+
 function App() {
     return (
         <div className="App">
@@ -14,6 +23,7 @@ function App() {
                 <p>hello world！！！</p>
             </header>
             <Greeting name="Newton" />
+            <Profile />
         </div>
     );
 }
