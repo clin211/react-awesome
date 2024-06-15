@@ -6,6 +6,7 @@ import ShallowCompare from './ShallowCompare';
 import PureComponent from './PureComponent';
 import Memo from './Memo';
 import GetSnapshotBeforeUpdate from './GetSnapshotBeforeUpdate';
+import TodoApp from './Todo';
 
 function App() {
     return (
@@ -18,7 +19,8 @@ function App() {
             <ShallowCompare /> */}
             {/* <PureComponent /> */}
             {/* <Memo /> */}
-            <GetSnapshotBeforeUpdate />
+            {/* <GetSnapshotBeforeUpdate /> */}
+            <TodoApp />
         </div>
     );
 }
