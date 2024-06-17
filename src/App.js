@@ -2,7 +2,9 @@ import { Component } from 'react';
 import ClassComponent from './ClassComponent';
 import FunctionComponent from './FunctionComponent';
 import JSXNestedChildren from './JSXNestedChildren';
+import Render, { LargeComponent, SmallComponent } from './Render';
 import './App.css';
+import useWindowSize from './hooks/useWindowSize';
 
 class Greeting extends Component {
     render() {
@@ -20,19 +22,26 @@ function Profile() {
 }
 
 function App() {
+    const size = useWindowSize();
     return (
         <div className="App">
             <header className="App-header">
                 <p>hello world！！！</p>
             </header>
-            <Greeting name="Newton" />
+            {/* <Greeting name="Newton" />
             <Profile />
             <h3>Class Component</h3>
             <ClassComponent />
             <h3>Function Component</h3>
             <FunctionComponent />
             <h3>JSX Nested Children</h3>
-            <JSXNestedChildren />
+            <JSXNestedChildren /> */}
+            <h3>render</h3>
+            <Render />
+            <h3>
+                window size: {size}
+                {size === 'small' ? <SmallComponent /> : <LargeComponent />}
+            </h3>
         </div>
     );
 }
