@@ -5,6 +5,9 @@ import JSXNestedChildren from './JSXNestedChildren';
 import Render, { LargeComponent, SmallComponent } from './Render';
 import './App.css';
 import useWindowSize from './hooks/useWindowSize';
+import User from './User';
+import ClosureTrap from './ClosureTrap';
+import UpdateObject from './UpdateObject';
 
 class Greeting extends Component {
     render() {
@@ -36,12 +39,17 @@ function App() {
             <FunctionComponent />
             <h3>JSX Nested Children</h3>
             <JSXNestedChildren /> */}
-            <h3>render</h3>
+            {/* <h3>render</h3>
             <Render />
             <h3>
                 window size: {size}
                 {size === 'small' ? <SmallComponent /> : <LargeComponent />}
-            </h3>
+            </h3> */}
+
+            <User />
+            <ClosureTrap />
+            <h3>Update Object</h3>
+            <UpdateObject />
         </div>
     );
 }
