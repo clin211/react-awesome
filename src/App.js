@@ -9,6 +9,9 @@ import User from './User';
 import ClosureTrap from './ClosureTrap';
 import UpdateObject from './UpdateObject';
 import Context from './Context';
+import Reducer from './Reducer';
+import Immutable from './Immutable';
+import ImmutableUseImmer from './ImmutableUseImmer';
 
 class Greeting extends Component {
     render() {
@@ -39,13 +42,13 @@ function App() {
             <h3>Function Component</h3>
             <FunctionComponent />
             <h3>JSX Nested Children</h3>
-            <JSXNestedChildren /> */}
-            {/* <h3>render</h3>
+            <JSXNestedChildren />
+            <h3>render</h3>
             <Render />
             <h3>
                 window size: {size}
                 {size === 'small' ? <SmallComponent /> : <LargeComponent />}
-            </h3> */}
+            </h3>
 
             <User />
             <ClosureTrap />
@@ -54,6 +57,13 @@ function App() {
 
             <h3>Context</h3>
             <Context />
+
+            <h3>Reducer</h3>
+            <Reducer /> */}
+            <h3>Immutable</h3>
+            <Immutable />
+            <h3>use immer</h3>
+            <ImmutableUseImmer />
         </div>
     );
 }
