@@ -8,6 +8,7 @@ import useWindowSize from './hooks/useWindowSize';
 import User from './User';
 import ClosureTrap from './ClosureTrap';
 import UpdateObject from './UpdateObject';
+import Article from './Article';
 
 class Greeting extends Component {
     render() {
@@ -46,10 +47,11 @@ function App() {
                 {size === 'small' ? <SmallComponent /> : <LargeComponent />}
             </h3> */}
 
-            <User />
+            {/* <User />
             <ClosureTrap />
             <h3>Update Object</h3>
-            <UpdateObject />
+            <UpdateObject /> */}
+            {<Article id="3" />}
         </div>
     );
 }
