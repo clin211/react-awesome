@@ -17,6 +17,7 @@ import Unalterable from './Unalterable';
 import NotRerender from './NotRerender';
 import PreventRefChangeInRender from './PreventRefChangeInRender';
 import Panic from './Panic';
+import Todo from './Todo';
 
 class Greeting extends Component {
     render() {
@@ -68,7 +69,7 @@ function App() {
             <h3>Immutable</h3>
             <Immutable />
             <h3>use immer</h3>
-            <ImmutableUseImmer /> */}
+            <ImmutableUseImmer />
             <h3>unalterable</h3>
             <Unalterable />
             <h3>Not Rerender</h3>
@@ -76,7 +77,8 @@ function App() {
             <h3>Prevent Ref Change In Render</h3>
             <PreventRefChangeInRender />
             <h3>Panic</h3>
-            <Panic />
+            <Panic />*/}
+            <Todo />
         </div>
     );
 }

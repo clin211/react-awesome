@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 50%;
+  min-width: 500px;
+}
