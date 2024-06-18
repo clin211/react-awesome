@@ -8,6 +8,7 @@ import useWindowSize from './hooks/useWindowSize';
 import User from './User';
 import ClosureTrap from './ClosureTrap';
 import UpdateObject from './UpdateObject';
+import Context from './Context';
 
 class Greeting extends Component {
     render() {
@@ -50,6 +51,9 @@ function App() {
             <ClosureTrap />
             <h3>Update Object</h3>
             <UpdateObject />
+
+            <h3>Context</h3>
+            <Context />
         </div>
     );
 }
