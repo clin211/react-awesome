@@ -18,6 +18,7 @@ import NotRerender from './NotRerender';
 import PreventRefChangeInRender from './PreventRefChangeInRender';
 import Panic from './Panic';
 import Todo from './Todo';
+import TodoList from './TodoList';
 
 class Greeting extends Component {
     render() {
@@ -77,8 +78,9 @@ function App() {
             <h3>Prevent Ref Change In Render</h3>
             <PreventRefChangeInRender />
             <h3>Panic</h3>
-            <Panic />*/}
-            <Todo />
+            <Panic />
+            <Todo />*/}
+            <TodoList />
         </div>
     );
 }
