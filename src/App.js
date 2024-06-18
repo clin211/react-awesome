@@ -13,6 +13,10 @@ import Context from './Context';
 import Reducer from './Reducer';
 import Immutable from './Immutable';
 import ImmutableUseImmer from './ImmutableUseImmer';
+import Unalterable from './Unalterable';
+import NotRerender from './NotRerender';
+import PreventRefChangeInRender from './PreventRefChangeInRender';
+import Panic from './Panic';
 
 class Greeting extends Component {
     render() {
@@ -60,11 +64,19 @@ function App() {
             <h3>Context</h3>
             <Context />
             <h3>Reducer</h3>
-            <Reducer /> */}
+            <Reducer />
             <h3>Immutable</h3>
             <Immutable />
             <h3>use immer</h3>
-            <ImmutableUseImmer />
+            <ImmutableUseImmer /> */}
+            <h3>unalterable</h3>
+            <Unalterable />
+            <h3>Not Rerender</h3>
+            <NotRerender />
+            <h3>Prevent Ref Change In Render</h3>
+            <PreventRefChangeInRender />
+            <h3>Panic</h3>
+            <Panic />
         </div>
     );
 }
