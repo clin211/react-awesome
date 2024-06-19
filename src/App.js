@@ -19,6 +19,7 @@ import PreventRefChangeInRender from './PreventRefChangeInRender';
 import Panic from './Panic';
 import Todo from './Todo';
 import TodoList from './TodoList';
+import UseImperativeHandle from './UseImperativeHandle';
 
 class Greeting extends Component {
     render() {
@@ -79,8 +80,9 @@ function App() {
             <PreventRefChangeInRender />
             <h3>Panic</h3>
             <Panic />
-            <Todo />*/}
-            <TodoList />
+            <Todo />
+            <TodoList />*/}
+            <UseImperativeHandle />
         </div>
     );
 }
