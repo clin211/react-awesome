@@ -1,0 +1,10 @@
+/* page.module.css */
+.container {
+    color: blue;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.active {
+    color: red;
+}

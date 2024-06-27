@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import ClassnamesStyles from './components/ClassnamesStyles';
+import ClassStyles from './components/ClassStyles';
+import DynamicStyles from './components/DynamicStyles';
+import EmotionStyledStyles from './components/EmotionStyledStyles';
+import EmotionStyles from './components/EmotionStyles';
+import InlineStyles from './components/InlineStyles';
+import StyledComponentsStyles from './components/StyledComponentsStyles';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <InlineStyles />
+            <DynamicStyles />
+            <ClassStyles />
+            <ClassnamesStyles />
+            <StyledComponentsStyles />
+            <EmotionStyles />
+            <EmotionStyledStyles />
+        </div>
+    );
 }
 
 export default App;

@@ -1,0 +1,11 @@
+/* common.css */
+.container {
+    color: blue;
+    background-color: lightgray;
+    padding: 10px;
+    user-select: none;
+}
+
+.active {
+    color: red;
+}
