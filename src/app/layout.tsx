@@ -8,6 +8,10 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
+import { zhCN } from "@clerk/localizations";
+
+import zhCNlocales from "@/locales/zh.json";
+import merge from "lodash.merge";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -18,18 +22,19 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const localization = merge(zhCN, zhCNlocales);
   return (
-    <ClerkProvider>
-      <html lang="en">
+    <ClerkProvider localization={localization}>
+      <html lang={localization.locale}>
         <body>
-          <header>
-            <SignedOut>
-              <SignInButton />
+          {/*<header>
+             <SignedOut>
+              <SignInButton>登录</SignInButton>
             </SignedOut>
             <SignedIn>
               <UserButton />
             </SignedIn>
-          </header>
+          </header> */}
           <main>{children}</main>
         </body>
       </html>
