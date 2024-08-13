@@ -1,4 +1,4 @@
-import { useState, Suspense } from 'react'
+import { useState, Suspense, Profiler } from 'react'
 import classNames from 'classnames';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -17,6 +17,7 @@ function App () {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <List />
     </Suspense>
   )
 }
@@ -36,6 +37,12 @@ function Counter () {
     <p>
       Edit <code>src/App.jsx</code> and save to test HMR
     </p>
+  </div>
+}
+
+function List () {
+  return <div>
+    {Array.from({ length: 10000 }).map((_, index) => <p key={index}>{index}</p>)}
   </div>
 }
 
