@@ -9,7 +9,7 @@ export default function CodeEditor() {
         files,
         setFiles,
         selectedFileName,
-        setSelectedFileName
+        // setSelectedFileName
     } = useContext(PlaygroundContext)
 
     const file = files[selectedFileName];

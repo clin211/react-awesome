@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react"
 import { PlaygroundContext } from "../../PlaygroundContext"
-import Editor from "../CodeEditor/Editor";
 import { compile } from "./compiler";
 import iframeRaw from './iframe.html?raw'
 import { IMPORT_MAP_FILE_NAME } from "../../files";
@@ -30,11 +29,13 @@ export default function Preview() {
 
     useEffect(() => {
         setIframeUrl(getIframeUrl())
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [files[IMPORT_MAP_FILE_NAME].value, compiledCode]);
 
     return <div style={{ height: '100%' }}>
         <iframe
             src={iframeUrl}
+            title='preview'
             style={{
                 width: '100%',
                 height: '100%',

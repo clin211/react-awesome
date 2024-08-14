@@ -13,7 +13,7 @@ export const beforeTransformCode = (filename: string, code: string) => {
 }
 
 export const babelTransform = (filename: string, code: string, files: Files) => {
-    let _code = beforeTransformCode(filename, code);
+    const _code = beforeTransformCode(filename, code);
     let result = ''
     try {
         result = transform(_code, {
@@ -94,7 +94,7 @@ function customResolver(files: Files): PluginObj {
     }
 }
 
-export const compile = (files: Files) => {
+export const compile = (files: Files): string => {
     const main = files[ENTRY_FILE_NAME]
     return babelTransform(ENTRY_FILE_NAME, main.value, files)
 }
