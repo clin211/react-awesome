@@ -1,4 +1,4 @@
-import { useState, Suspense, Profiler } from 'react'
+import { useState, Suspense } from 'react'
 import classNames from 'classnames';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
