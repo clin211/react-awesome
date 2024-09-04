@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Redux basic example</title>
+</head>
+
+<body>
+    <div>
+        <p>
+            Clicked: <span id="value">0</span> times
+            <button id="increment">+</button>
+            <button id="decrement">-</button>
+            <button id="incrementIfOdd">Increment if odd</button>
+            <button id="incrementAsync">Increment async</button>
+        </p>
+    </div>
+    <script type="module">
+        import { createStore } from "https://unpkg.com/redux@latest/dist/redux.browser.mjs";
+        // 定义初始状态值
+        const initialState = {
+            value: 0
+        };
+
+        const types = {
+            INCREMENT: "counter/incremented",
+            DECREMENT: "counter/decremented"
+        };
+
+        // 创建一个“reducer”函数
+        function counterReducer (state = initialState, action) {
+            // 根据 action 的类型来更新状态
+            switch (action.type) {
+                case types.INCREMENT:
+                    return { ...state, value: state.value + 1 };
+                case types.DECREMENT:
+                    return { ...state, value: state.value - 1 };
+                default:
+                    // 没有匹配上的 action.type，返回原始 state
+                    return state;
+            }
+        }
+
+        // 用 `createStore` 函数创建一个新的 Redux 存储，并使用 `counterReducer` 作为更新逻辑
+        const store = createStore(counterReducer);
+
+        const valueEl = document.getElementById("value");
+
+        // 每当存储的状态发生变化时，更新 UI，读取最新的存储状态并显示新数据
+        function render () {
+            const state = store.getState();
+            valueEl.innerHTML = state.value.toString();
+        }
+
+        // 用初始数据更新 UI
+        render();
+
+        // 订阅状态变化时触发render
+        store.subscribe(render);
+
+        document
+            .getElementById("increment")
+            .addEventListener("click", function () {
+                store.dispatch({ type: types.INCREMENT });
+            });
+
+        document
+            .getElementById("decrement")
+            .addEventListener("click", function () {
+                store.dispatch({ type: types.DECREMENT });
+            });
+
+        document
+            .getElementById("incrementIfOdd")
+            .addEventListener("click", function () {
+                // 当 store 中的状态是奇数时，dispatch 一个 INCREMENT 事件
+                if (store.getState().value % 2 !== 0) {
+                    store.dispatch({ type: types.INCREMENT });
+                }
+            });
+
+        document
+            .getElementById("incrementAsync")
+            .addEventListener("click", function () {
+                // 模拟异步逻辑
+                setTimeout(function () {
+                    store.dispatch({ type: types.INCREMENT });
+                }, 1000);
+            });
+    </script>
+</body>
+
+</html>
