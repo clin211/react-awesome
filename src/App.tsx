@@ -2,7 +2,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import useCounter from './store/useCounter'
-import CounterButton from './assets/components/CounterButton'
+import CounterButton from './components/CounterButton'
 
 function App() {
   const count = useCounter(state => state.count)

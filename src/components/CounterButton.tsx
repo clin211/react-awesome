@@ -1,5 +1,4 @@
-import React from 'react'
-import useCounter from '../../store/useCounter'
+import useCounter from '../store/useCounter'
 
 interface Props {
     type: 'increment' | 'decrement'
