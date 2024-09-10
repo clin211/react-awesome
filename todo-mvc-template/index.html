@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo MVC</title>
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+    <section class="todoapp">
+        <header id="header" class="header">
+            <h1>todos</h1>
+            <input id="new-todo" class="new-todo" placeholder="What needs to be done?" autofocus>
+        </header>
+        <main id="main" class="main">
+            <div class="toggle-all-container">
+                <input id="toggle-all" class="toggle-all" type="checkbox">
+                <label for="toggle-all">Mark all as complete</label>
+            </div>
+            <ul id="todo-list" class="todo-list">
+                <li class="completed">
+                    <div class=" view">
+                        <input class="toggle" type="checkbox" checked aria-label="Mark item as complete" />
+                        <label>this is example</label>
+                        <button class="destroy" aria-label="Delete item"></button>
+                    </div>
+                    <input class="edit" value="this is example" aria-label="Edit item" />
+                </li>
+            </ul>
+        </main>
+        <footer id="footer" class="footer">
+            <span id="todo-count" class="todo-count"><strong>4</strong> items left</span>
+            <ul id="filters" class="filters">
+                <li>
+                    <a class="selected" href="#/all">All</a>
+                </li>
+                <li>
+                    <a class="selected" href="#/active">Active</a>
+                </li>
+                <li>
+                    <a class="selected" href="#/completed">Completed</a>
+                </li>
+            </ul>
+            <button class="clear-completed">Clear completed</button>
+        </footer>
+    </section>
+</body>
+
+</html>
+
+</html>
