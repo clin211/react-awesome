@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Flex, Radio, Segmented, Tabs } from 'antd';
-import type { RadioChangeEvent, TabsProps } from 'antd';
+import type { TabsProps } from 'antd';
 import All from './all';
 import SingleProduct from './single-product';
 import LoadMore from './load-more';
@@ -36,13 +36,9 @@ const Product: React.FC = () => {
     // 对齐方式
     const [alignValue, setAlignValue] = React.useState<Align>('center');
 
-    const handleModeChange = (e: RadioChangeEvent) => {
-        setMode(e.target.value);
-    };
-
     return <>
         <Flex gap={8}>
-            <Radio.Group onChange={handleModeChange} value={mode} style={{ marginBottom: 8 }}>
+            <Radio.Group onChange={e => setMode(e.target.value)} value={mode} style={{ marginBottom: 8 }}>
                 <Radio.Button value="top">Horizontal</Radio.Button>
                 <Radio.Button value="left">Vertical</Radio.Button>
             </Radio.Group>
