@@ -5,12 +5,12 @@ import { getProducts, Product } from '../../api/products';
 import "./style.css"
 
 const All = () => {
-    const { data, error, isLoading } = useQuery<Product[]>({
+    const { data, error, isPending } = useQuery<Product[]>({
         queryKey: ['products'],
         queryFn: getProducts,
     });
 
-    if (isLoading) {
+    if (isPending) {
         return <div>Loading...</div>;
     }
 
