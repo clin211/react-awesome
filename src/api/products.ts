@@ -37,7 +37,8 @@ export async function getProductByID(id: number): Promise<Product> {
 }
 
 // 分页获取商品
-export async function getProductByPage(page: number): Promise<Product[]> {
+export async function getProductByPage(total: number): Promise<Product[]> {
+    const page = total % 5;
     // 因为产品一共只有 20 条，为了达到多页获取的效果，所以每页最多显示 5 条
     if (page > 4) {
         return []
@@ -58,3 +59,4 @@ export async function createProduct(product: CreateProduct): Promise<Product> {
     })
     return await response.json()
 }
+
