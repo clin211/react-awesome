@@ -38,14 +38,14 @@ const All = () => {
                     type='inner'
                     style={{ width: 220 }}
                     cover={
-                        <p style={{ display: 'flex', alignContent: 'center', justifyContent: 'center' }}>
+                        <div style={{ display: 'flex', alignContent: 'center', justifyContent: 'center', padding: '10px' }}>
                             <Image
                                 width={200}
                                 height={200}
                                 preview={false}
                                 src={product.image}
                             />
-                        </p>
+                        </div>
                     }
                 >
                     <List.Item.Meta title={<p className='ellipsis' style={{ '--ellipsis-line': 2, height: '48px' } as React.CSSProperties} >{product.title}</p>} description={<p className='ellipsis' style={{ '--ellipsis-line': 3 } as React.CSSProperties}>{product.description}</p>} />

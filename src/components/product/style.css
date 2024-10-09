@@ -9,3 +9,10 @@
   overflow: hidden;
   text-overflow: ellipsis; /* 省略号 */
 }
+
+.image-box {
+  padding: 10px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 1px solid #f0f0f0;
+}
