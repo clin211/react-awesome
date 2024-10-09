@@ -42,12 +42,13 @@ const All = () => {
                             <Image
                                 width={200}
                                 height={200}
+                                preview={false}
                                 src={product.image}
                             />
                         </p>
                     }
                 >
-                    <List.Item.Meta title={<p className='ellipsis' style={{ '--ellipsis-line': 2 } as React.CSSProperties} >{product.title}</p>} description={<p className='ellipsis' style={{ '--ellipsis-line': 3 } as React.CSSProperties}>{product.description}</p>} />
+                    <List.Item.Meta title={<p className='ellipsis' style={{ '--ellipsis-line': 2, height: '48px' } as React.CSSProperties} >{product.title}</p>} description={<p className='ellipsis' style={{ '--ellipsis-line': 3 } as React.CSSProperties}>{product.description}</p>} />
                 </Card>
             </List.Item>
         )}
