@@ -5,10 +5,6 @@ import All from './all';
 import SingleProduct from './single-product';
 import LoadMore from './load-more';
 
-const onChange = (key: string) => {
-    console.log(key);
-};
-
 const items: TabsProps['items'] = [
     {
         key: '1',
@@ -53,7 +49,6 @@ const Product: React.FC = () => {
             defaultActiveKey="1"
             tabPosition={mode}
             items={items}
-            onChange={onChange}
             indicator={{ size: (origin) => origin - 20, align: alignValue }}
         />
     </>
