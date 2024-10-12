@@ -1,0 +1,9 @@
+version: '3'
+services:
+  grpc-nextjs-chat:
+    build: .
+    image: grpc-nextjs-chat
+    ports:
+      - "8080:8080"
+      - "9901:9901"
+    container_name: grpc-nextjs-chat
