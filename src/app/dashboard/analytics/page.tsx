@@ -1,6 +1,6 @@
 function page() {
     return (
-        <div>这里是 dashboard</div>
+        <div>这里是 dashboard/analytics</div>
     )
 }
 

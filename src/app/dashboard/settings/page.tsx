@@ -1,6 +1,6 @@
 const page = () => {
     return (
-        <div>dashboard/settings</div>
+        <div>这里是 dashboard/settings</div>
     )
 }
 
